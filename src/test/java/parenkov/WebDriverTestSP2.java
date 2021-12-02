@@ -4,6 +4,7 @@ import com.codeborne.selenide.Configuration;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import parenkov.config.Browser;
 import parenkov.config.WebDriverConfig;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -20,6 +21,6 @@ public class WebDriverTestSP2 {
     public void testTitle() {
         Configuration.browser = config.getBrowser();
         open(config.getBaseUrl());
-        assertEquals("GitHub: Where the world builds software · GitHub", title());
+        assertEquals("Selenide · GitHub", title());
     }
 }

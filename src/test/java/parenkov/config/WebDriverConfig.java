@@ -8,7 +8,7 @@ import java.net.URL;
 public interface WebDriverConfig extends Config {
 
     @Key("browser")
-    @DefaultValue("firefox")
+    @DefaultValue("chrome") // сделать с Enum !!!
     String getBrowser();
 
     @Key("browserVersion")
@@ -16,7 +16,7 @@ public interface WebDriverConfig extends Config {
     String getBrowserVersion();
 
     @Key("baseUrl")
-    @DefaultValue("https://github.com")
+    @DefaultValue("https://github.com/selenide")
     String getBaseUrl();
 
     @Key("remoteUrl")
