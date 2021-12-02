@@ -1,6 +1,5 @@
 package parenkov.config;
 
-import com.codeborne.selenide.Configuration;
 import org.aeonbits.owner.Config;
 
 import java.net.URL;
