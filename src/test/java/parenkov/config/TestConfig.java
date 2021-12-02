@@ -4,9 +4,9 @@ import com.codeborne.selenide.Configuration;
 
 public class TestConfig {
 
-//    public String getBrowser() {
-//        return Configuration.browser = "edge";
-//    }
+    public String getBrowser() {
+        return Configuration.browser = "edge";
+    }
 
 //        public Browser getBrowser() {
 //        return Browser.FIREFOX;
