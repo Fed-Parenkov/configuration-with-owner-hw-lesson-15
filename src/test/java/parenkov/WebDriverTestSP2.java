@@ -4,7 +4,6 @@ import com.codeborne.selenide.Configuration;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import parenkov.config.Browser;
 import parenkov.config.WebDriverConfig;
 
 import static com.codeborne.selenide.Selenide.open;
