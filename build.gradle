@@ -29,6 +29,7 @@ test {
 
 task web(type: Test) {
     useJUnitPlatform {
-        includeTags "web2"
+        systemProperties(System.getProperties())
+        includeTags "web4"
     }
 }
