@@ -4,10 +4,10 @@ import org.aeonbits.owner.Config;
 
 import java.net.URL;
 
-public interface SimpleTestConfig extends Config {
+public interface RemoteConfig extends Config {
 
     @Key("browser")
-    @DefaultValue("chrome") // сделать с Enum !!!
+    @DefaultValue("chrome")
     String getBrowser();
 
     @Key("browserVersion")
@@ -19,5 +19,6 @@ public interface SimpleTestConfig extends Config {
     String getBaseUrl();
 
     @Key("remoteUrl")
+    @DefaultValue("https://user1:1234@selenoid.autotests.cloud/wd/hub/")
     URL getRemoteUrl();
 }
