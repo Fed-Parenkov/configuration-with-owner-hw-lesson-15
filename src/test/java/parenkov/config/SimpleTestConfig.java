@@ -4,7 +4,7 @@ import org.aeonbits.owner.Config;
 
 import java.net.URL;
 
-public interface WebDriverConfig extends Config {
+public interface SimpleTestConfig extends Config {
 
     @Key("browser")
     @DefaultValue("chrome") // сделать с Enum !!!
