@@ -2,10 +2,10 @@ package parenkov.config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources({"classpath:${webdriver}.properties"})
-public interface SimpleTestsConfig extends Config {
+@Config.Sources({"classpath:${driver}.properties"})
+public interface WebUITestConfig extends Config {
 
-    @Key("driver")
+    @Key("webdriver")
     String getWebDriver();
 
     @Key("browser")

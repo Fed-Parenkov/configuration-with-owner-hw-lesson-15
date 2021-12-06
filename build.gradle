@@ -26,3 +26,10 @@ tasks.withType(Test) {
     useJUnitPlatform()
     systemProperties(System.getProperties())
 }
+
+task web(type: Test) {
+    systemProperties(System.getProperties())
+    useJUnitPlatform {
+        includeTags "web"
+    }
+}
