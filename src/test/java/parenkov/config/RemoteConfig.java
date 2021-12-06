@@ -2,8 +2,6 @@ package parenkov.config;
 
 import org.aeonbits.owner.Config;
 
-import java.net.URL;
-
 public interface RemoteConfig extends Config {
 
     @Key("browser")
@@ -11,7 +9,7 @@ public interface RemoteConfig extends Config {
     String getBrowser();
 
     @Key("browserVersion")
-    @DefaultValue("94")
+    @DefaultValue("91")
     String getBrowserVersion();
 
     @Key("baseUrl")
@@ -20,5 +18,5 @@ public interface RemoteConfig extends Config {
 
     @Key("remoteUrl")
     @DefaultValue("https://user1:1234@selenoid.autotests.cloud/wd/hub/")
-    URL getRemoteUrl();
+    String getRemoteUrl();
 }

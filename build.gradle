@@ -8,14 +8,14 @@ repositories {
 
 dependencies {
     testImplementation("com.codeborne:selenide:6.1.1",
-            "org.junit.jupiter:junit-jupiter-api:5.8.1",
+            'org.junit.jupiter:junit-jupiter-api:5.8.2',
             "io.rest-assured:rest-assured:4.4.0",
-            "org.seleniumhq.selenium:selenium-java:4.0.0",
+            'org.seleniumhq.selenium:selenium-java:4.1.0',
             "org.assertj:assertj-core:3.21.0",
             "org.aeonbits.owner:owner:1.0.12"
     )
     testRuntimeOnly("org.slf4j:slf4j-simple:1.7.32",
-            "org.junit.jupiter:junit-jupiter-engine:5.8.1"
+            'org.junit.jupiter:junit-jupiter-engine:5.8.2'
     )
 }
 
@@ -23,7 +23,14 @@ tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
 }
 
-test {
+tasks.withType(Test) {
     useJUnitPlatform()
     systemProperties(System.getProperties())
+}
+
+task remote(type: Test) {
+    systemProperties(System.getProperties())
+    useJUnitPlatform {
+        includeTags "remote"
+    }
 }

@@ -2,8 +2,6 @@ package parenkov.config;
 
 import org.aeonbits.owner.Config;
 
-import java.net.URL;
-
 public interface LocalConfig extends Config {
 
     @Key("browser")
