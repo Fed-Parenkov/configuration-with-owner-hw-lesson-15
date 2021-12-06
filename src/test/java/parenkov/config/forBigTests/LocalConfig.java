@@ -1,4 +1,4 @@
-package parenkov.config;
+package parenkov.config.forBigTests;
 
 import org.aeonbits.owner.Config;
 
