@@ -1,16 +1,16 @@
 package parenkov;
 
 import com.codeborne.selenide.Configuration;
-import parenkov.config.AllConfig;
+import parenkov.config.SimpleTestsConfig;
 
 public class TestBase {
 
     public String expectedResult = "Selenide · GitHub";
 
-    public AllConfig config;
+    public SimpleTestsConfig config;
 
-    public void setWebdriver() {
-        if (config.getWebdriver().equals("local")) {
+    public void setWebDriver() {
+        if (config.getWebDriver().equals("local")) {
             Configuration.browser = config.getBrowser();
             return;
         }

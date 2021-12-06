@@ -2,16 +2,15 @@ package parenkov;
 
 import com.codeborne.selenide.Configuration;
 import org.aeonbits.owner.ConfigFactory;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import parenkov.config.forBigTests.LocalConfig;
-import parenkov.config.forBigTests.RemoteConfig;
+import parenkov.config.forNoWebDriverSwitchingTests.LocalConfig;
+import parenkov.config.forNoWebDriverSwitchingTests.RemoteConfig;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.title;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BigTests {
+public class NoWebDriverSwitchingTests {
 
     String expectedResult = "Selenide · GitHub";
 
@@ -26,7 +25,6 @@ public class BigTests {
     }
 
     @Test
-    @Tag("remote")
     public void remoteTitleTest() {
         System.setProperty("browserVersion", "90");
         RemoteConfig remote =

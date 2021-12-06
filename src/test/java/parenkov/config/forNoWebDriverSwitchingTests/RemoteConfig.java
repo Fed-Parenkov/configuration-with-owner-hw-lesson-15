@@ -1,4 +1,4 @@
-package parenkov.config.forBigTests;
+package parenkov.config.forNoWebDriverSwitchingTests;
 
 import org.aeonbits.owner.Config;
 
