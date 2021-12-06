@@ -15,7 +15,7 @@ public class SimpleTest {
 
     @Test
     public void titleTest() {
-        System.setProperty("browser", "edge");
+//        System.setProperty("browser", "firefox");
         LocalConfig local =
                 ConfigFactory.create(LocalConfig.class, System.getProperties());
         Configuration.browser = local.getBrowser();
@@ -26,7 +26,7 @@ public class SimpleTest {
     @Test
     @Tag("remote")
     public void remoteTitleTest() {
-        System.setProperty("browserVersion", "90");
+//        System.setProperty("browserVersion", "90");
         RemoteConfig remote =
                 ConfigFactory.create(RemoteConfig.class, System.getProperties());
         Configuration.remote = remote.getRemoteUrl();

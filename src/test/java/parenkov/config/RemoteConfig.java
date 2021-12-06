@@ -4,10 +4,6 @@ import org.aeonbits.owner.Config;
 
 public interface RemoteConfig extends Config {
 
-    @Key("browser")
-    @DefaultValue("chrome")
-    String getBrowser();
-
     @Key("browserVersion")
     @DefaultValue("91")
     String getBrowserVersion();
