@@ -9,13 +9,14 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.title;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class UITest extends UITestBase {
+public class UITest extends TestBase {
 
     @Test
-    @Tag("web")
+    @Tag("ui_test")
     public void titleTest() {
-        System.setProperty("driver", "local"); // для запуска теста задаем "local" или "remote" WebDriver
-        // либо передаем системную переменную через терминал: gradle clean web -Ddriver=local (или remote)
+        System.setProperty("driver", "remote");
+        // для запуска теста через System.setProperty задаем значения WebDriver: "local" или "remote"
+        // либо передаем системную переменную через терминал: gradle clean ui_test -Ddriver=local (или remote)
 
         config = ConfigFactory.create(UITestConfig.class, System.getProperties());
         setWebDriver();

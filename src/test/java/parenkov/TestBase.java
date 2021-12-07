@@ -1,13 +1,15 @@
 package parenkov;
 
 import com.codeborne.selenide.Configuration;
+import parenkov.config.APITestConfig;
 import parenkov.config.UITestConfig;
 
-public class UITestBase {
+public class TestBase {
 
     public String expectedResult = "Selenide · GitHub";
 
     public UITestConfig config;
+    public APITestConfig apiconfig;
 
     public void setWebDriver() {
         if (config.getWebDriver().equals("local")) {

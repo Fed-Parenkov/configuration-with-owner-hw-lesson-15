@@ -27,16 +27,16 @@ tasks.withType(Test) {
     systemProperties(System.getProperties())
 }
 
-task web(type: Test) {
+task ui_test(type: Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform {
-        includeTags "web"
+        includeTags "ui_test"
     }
 }
 
-task api(type: Test) {
+task api_test(type: Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform {
-        includeTags "api"
+        includeTags "api_test"
     }
 }
